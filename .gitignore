@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+package-lock.json
+.venv/
+cloudinary/**/*.png
+cloudinary/**/*.jpg
+cloudinary/**/*.jpeg
+cloudinary/**/*.heic
