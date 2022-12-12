@@ -1,0 +1,21 @@
+<head>
+  <meta charset="utf-8">
+  <%
+  var title = [];
+  if (page.current > 1) title.push(__('page', page.current));
+  if (page.title) title.push(page.title);
+  if (page.category) title.push(page.category);
+  if (page.tag) title.push(page.tag);
+  if (page.archive){
+    if (page.year) title.push(__('archive_b', page.year + (page.month ? '/' + page.month : '')));
+    else title.push(__('archive_a'));
+  }
+  title.push(config.title);
+  %>
+  <title><%= title.join(' | ') %></title>
+  <% if (config.author){ %><meta name="author" content="<%= config.author %>"><% } %>
+
+  <link rel="stylesheet" href="<%- url_for('css/style.css') %>">
+  <script src="<%- url_for('libs/jquery/3.6.0/jquery.min.js') %>"></script>
+
+</head>

@@ -1,0 +1,22 @@
+<article class="h-entry <% if (item.layout == 'page'){ %>page<% } else { %>post<% } %>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <header>
+    <%- partial('post/title') %>
+    <% if (item.layout != 'page'){ %><%- partial('post/date') %><% } %>
+  </header>
+  <div class="e-content entry-content">
+    <%- item.content %>
+    <% if (theme.history_control.enable) { 
+      let repertory_address = `${theme.history_control.server_link}/${theme.history_control.user}/${theme.history_control.repertory}`;
+      let file_path = `${theme.history_control.branch}/source/${item.source}`;%>
+      <div class="article-meta-button">
+          <a href='<%= theme.history_control.server_link %><%= theme.history_control.user %>/<%= theme.history_control.repo %><%= `/raw/${file_path}` %>'> Source </a>
+      </div>
+      <div class="article-meta-button">
+          <a href='<%= theme.history_control.server_link %><%= theme.history_control.user %>/<%= theme.history_control.repo %><%= `/edit/${file_path}` %>'> Edit </a>
+      </div>
+      <div class="article-meta-button">
+          <a href='<%= theme.history_control.server_link %><%= theme.history_control.user %>/<%= theme.history_control.repo %><%= `/commits/${file_path}` %>'> History </a>
+      </div>
+  <% } %>
+  </div>
+</article>

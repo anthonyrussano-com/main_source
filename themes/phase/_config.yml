@@ -1,0 +1,30 @@
+menu:
+  anthonyrussano.com: /
+  # Archives: /archives
+
+addthis:
+  enable: false
+  pubid:
+  facebook: false
+  twitter: false
+  google: false
+  pinterest: false
+
+facebook:
+google_plus:
+twitter:
+github:
+
+history_control: # make you wiki has history version control in page
+    enable: true
+    server_link: "https://github.com/" # recommend use GitHub https://github.com
+    user: anthonyrussano-com
+    repertory: public
+    branch: main
+    repo: main_source
+
+fancybox: true
+google_analytics:
+rss:
+# Display a "Read More" link under each post's excerpt in /archives page
+#excerpt_link: 'Read More'
